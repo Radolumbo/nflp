@@ -23,5 +23,10 @@ df.reset_index(drop=True, inplace=True)
 #D.Montgomery has player_id 00-0035685
 
 df = df.loc[df['rusher'] == "D.Montgomery"]
+print(f"David Montgomery gained {df['yards_gained'].sum()} yards in 2019.")
 
-print(f"David Montgomery gained {df['yards_gained'].sum()} in 2019.")
+df = df.loc[df['down'] == 1]
+print(f"David Montgomery gained {df['yards_gained'].sum()} yards on 1st downs in 2019.")
+
+df = df.loc[df['total_home_score'] - df['total_away_score'] < -8]
+print(f"David Montgomery gained {df['yards_gained'].sum()} yards on 1st downs while trailing by more than 1 score in 2019.")
