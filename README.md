@@ -4,7 +4,7 @@ Natural Football Language Processing
 ## Bootstrap Your Dev Environment
 ### wsl
 ```bash
-. wsl-bootstrap.sh
+source hack/wsl-bootstrap.sh
 ```
 
 ### MacOS
